@@ -1,23 +1,22 @@
 
+class NaanFactory:
 
-def make_dough(ingredient1, ingredient2):
-    if ingredient1 == "water" or ingredient2 == "water":
-        if ingredient1 == "flour" or ingredient2 == "flour":
-            return "dough"
+    def make_dough(self, ingredient1, ingredient2):
+        if ingredient1 == "water" or ingredient2 == "water":
+            if ingredient1 == "flour" or ingredient2 == "flour":
+                return "dough"
 
-    return ingredient1 + "y " + ingredient2
+        return ingredient1 + "y " + ingredient2
 
+    def bake_dough(self, ingredient1):
+        if ingredient1 == "dough":
+            return "naan bread"
+        return "unknown"
 
-def bake_dough(ingredient1):
-    if ingredient1 == "dough":
-        return "naan bread"
-    return "unknown"
-
-
-def run_factory(ingredient1, ingredient2):
-    dough = make_dough(ingredient1, ingredient2)
-    naan = bake_dough(dough)
-    return naan
+    def run_factory(self, ingredient1, ingredient2):
+        dough = self.make_dough(ingredient1, ingredient2)
+        naan = self.bake_dough(dough)
+        return naan
 
 
 if __name__ == "__main__":
@@ -30,4 +29,4 @@ if __name__ == "__main__":
         ing1 = input("What is the first ingredient for the dough?: ")
         ing2 = input("What is the second ingredient for the dough?: ")
 
-        print(f"You made {run_factory(ing1, ing2)}")
+        print(f"You made {NaanFactory.run_factory(ing1, ing2)}")
