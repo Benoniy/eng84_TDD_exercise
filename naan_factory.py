@@ -2,6 +2,7 @@
 class NaanFactory:
     #  Returns dough only if the ingredients are correct
     def make_dough(self, ingredient1, ingredient2):
+        print("Making dough!")
         if ingredient1 == "water" or ingredient2 == "water":
             if ingredient1 == "flour" or ingredient2 == "flour":
                 return "dough"
@@ -10,13 +11,16 @@ class NaanFactory:
 
     # Returns naan bread only if the dough is correct
     def bake_dough(self, ingredient1):
+        print("Baking dough!")
         if ingredient1 == "dough":
             return "naan bread"
         return "unknown"
 
     # Runs the factory to make naan bread out of the ingredients provided
     def run_factory(self, ingredient1, ingredient2):
+        print("\nRunning factory!")
         dough = self.make_dough(ingredient1, ingredient2)
+        print(f"you made {dough}")
         naan = self.bake_dough(dough)
         return naan
 
@@ -25,7 +29,7 @@ class NaanFactory:
 if __name__ == "__main__":
     factory = NaanFactory()  # Instantiate NaanFactory
     while True:
-        user_input = input("Would you like to make naan today? (y or n): ")  # gives the user an option to exit
+        user_input = input("\nWould you like to make naan today? (y or n): ")  # gives the user an option to exit
 
         if user_input.lower() == "n":  # exit if no
             break
