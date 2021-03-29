@@ -1,6 +1,6 @@
 # TDD Bread Factory! :bread:
 
-## Tasks
+## Tasks:
 TDD bread factory is the latest bread brand in Py Land. It always produces the best bread because it has the best testing strategy!
 
 What they do is before they make any new bread, they make a test to make sure the end ouput is correct. Then they adjust the recipe until it's just right!
@@ -11,7 +11,7 @@ You are going to do the same with bread! This is called Test Driven Development.
 
 This exercise is going to bring together lots of concepts.
 
-### Learning Outcomes
+### Learning Outcomes:
 Learning outcomes include:
 - git
 - github
